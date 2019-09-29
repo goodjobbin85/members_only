@@ -15,8 +15,11 @@ class UsersController < ApplicationController
    def create 
        @user = User.new(params[:id])
        if @user.update(user_params)
+           flash[:success] = "Welcome, #{@user.email}"
+           login_user(@user)
            redirect_to root_path
        else
+           flash[:danger] = "Please try again."
            render :new
        end
    end
