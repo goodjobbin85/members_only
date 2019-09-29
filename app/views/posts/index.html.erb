@@ -1,0 +1,10 @@
+<h1>All Posts</h1>
+<ul>
+    <% @posts.each do |post| %>
+        <li><%= post.description %></li>
+    <% end %>
+</ul>
+
+<%= link_to "Home", root_path %>
+<%= link_to "Create more posts", new_post_path %>
+

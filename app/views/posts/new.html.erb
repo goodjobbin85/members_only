@@ -1,0 +1,10 @@
+<h1>Create Post</h1>
+
+<div align="center">
+    <%= form_for @post do |f| %>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+        
+        <%= f.submit %>
+    <% end %>
+</div>
