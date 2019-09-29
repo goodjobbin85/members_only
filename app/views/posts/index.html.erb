@@ -1,7 +1,7 @@
 <h1>All Posts</h1>
 <ul>
     <% @posts.each do |post| %>
-        <li><%= post.description %></li>
+        <li><%= post.description %> by <%= post.user.email %></li> 
     <% end %>
 </ul>
 
